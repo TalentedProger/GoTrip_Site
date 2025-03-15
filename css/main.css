@@ -307,9 +307,10 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: center;
+  padding-block: 100px;
   align-items: center;
   transition: opacity 0.2s ease-in;
+  justify-content: space-between;
 }
 .loader-wrapper--hidden {
   opacity: 0;
@@ -323,6 +324,10 @@ html, body {
   position: relative;
   background: black;
   overflow: hidden;
+
+  @media (max-width:650px) {
+    width: 250px;
+  }
 }
 
 .loader::after {
@@ -348,6 +353,10 @@ html, body {
 .loading-start, .loading-end {
   font-size: 25px;
   font-weight: 700;
+
+  @media (max-width:650px) {
+    font-size: 20px;
+  }
 }
 
 .loading-start {
@@ -363,13 +372,19 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 60px;
   letter-spacing: 3px;
   background-color: black;
+  padding-inline: 10px;
 }
 .title-wrapper h1 {
   font-size: 30px;
   font-weight: 300;
+
+  @media (max-width:650px) {
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-wrap: nowrap;
+  }
 }
 
 .slide__locations {
